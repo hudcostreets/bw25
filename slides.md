@@ -151,35 +151,44 @@ class: us
 - **New technology**: ebikes/micromobility, better/faster/quieter transit, app-cars / AVs help reduce <br/>car ownership
 
 ---
+class: proving-it
+dragPos:
+  jc: 724,18,241,302
+  cb: 355,18,390,282
+  path: 432,276,416,257
+  xbl: 46,74,435,266
+  hom: 46,300,427,233
 ---
-# Proving it, locally
 
 <style>
-img {
-  position: absolute;
-}
-.hom, .cb { right: 2% }
-.xbl, .hom { bottom: 45% }
-.xbl {
-  height: 40%;
-}
-.hom {
-  height: 50%;
-}
-.cb {
-  width: 40%;
-  bottom: 3%;
-}
-.path {
-  width: 40%;
-  bottom: 3%;
+.slidev-layout.proving-it {
+  padding-top: 1.6rem;
+  h1 {
+    /*position: relative;*/
+    /*z-index: 200;*/
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>
 
-<a href="https://crashes.hudcostreets.org/#vs-homicides" target="_blank"><img class="hom" src="/hom-cmp.png"/></a>
-<a href="https://github.com/hudcostreets/hudson-transit" target="_blank"><img src="/xbl.png" class="xbl"/></a>
-<a href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410" target="_blank"><img src="/grove-2410.png" class="cb"/></a>
-<a href="https://path.hudcostreets.org/#vs-2019" target="_blank"><img src="/path-vs19.png" class="path"/></a>
+<!--
+<div v-drag="'jc'"><img src="/pbls-roads.gif" class="jc" /></div>
+<div v-drag="'cb'"><img src="/g2410.png" class="cb"/></div>
+<div v-drag="'path'"><img src="/path-vs19.png" class="path"/></div>
+<div v-drag="'xbl'"><img src="/xbl2.png" class="xbl"/></div>
+<div v-drag="'hom'"><img class="hom" src="/hom.png"/></div>
+-->
+
+<div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/pbls-roads.gif" class="jc" /></a></div>
+<div v-drag="'cb'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png" class="cb"/></a></div>
+<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png" class="path"/></a></div>
+<div v-drag="'xbl'"><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl2.png" class="xbl"/></a></div>
+<div v-drag="'hom'"><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img class="hom" src="/hom.png"/></a></div>
+
+# Proving it, locally
 
 [hom-cmp]: https://crashes.hudcostreets.org/#vs-homicides
 [xbl]: https://github.com/hudcostreets/hudson-transit
