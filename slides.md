@@ -265,7 +265,7 @@ Citi Bike dashboard
 - 67% ebike share, 82% annual subscribers
 - Grove St (≈2 parking spots): 90-180 ride ends / day ([Feb '25][2502], [Oct '24][2410])
 
-[![](/grove-2410.png)][2410]
+[![](/g2410.png)][2410]
 
 <img v-click src="/cb-hc-opp.png" />
 
