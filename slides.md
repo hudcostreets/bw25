@@ -191,41 +191,50 @@ dragPos:
 [path]: https://path.hudcostreets.org/#vs-2019
 
 ---
-layout: two-cols
-layoutClass: nymtc
+# layout: two-cols
+class: nymtc
+dragPos:
+  xbl: 36,160,540,_
+  nymtc: 596,157,279,_
 ---
 
 <style>
-.nymtc + footer { display: none; }
+.nymtc + footer { .foot-url { display: none; } }
 .slidev-layout.nymtc {
-  padding: 2rem 2.5rem 2rem 1.5rem;
-  grid-template-columns: 70% 30%;
+  display: grid;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+  grid-template-columns: 60% 31%;
   gap: 1rem;
-  background-image: none;
-  img {
-    position: absolute;
-    bottom: 0;
-  }
-  .col-left, .col-right { position: relative }
-  .col-right { padding-top: 1.5rem }
+  .col-right { padding-top: 1rem }
 }
 </style>
 
-# BRT / Lincoln Tunnel Bus Lane
+<div class="col-left">
+  <h1>BRT / <a href="https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html" target="_blank">Lincoln Tunnel Bus Lane</a></h1>
 
-<a href="https://github.com/hudcostreets/hudson-transit" target="_blank"><img src="/xbl.png"/></a>
+  > … busiest and most productive highway lane in the nation, moving over 1,850 buses and 70,000 passengers each weekday morning &nbsp;[<mdi-link />][xbl faq]
+</div>
+<div class="col-right">
+  <h4>
+    <a href="https://www.nymtc.org/en-us/Data-and-Modeling/Transportation-Data-and-Statistics/Publications/Hub-Bound-Travel" target="_blank">
+      NYMTC Hub-Bound Travel
+    </a>
+  </h4>
+  <p>Annual study of modes / vehicles in/out of Manhattan CBD</p>
+</div>
 
-::right::
+[xbl]: https://www.panynj.gov/bridges-tunnels/en/lincoln-tunnel/xbl.html
+[xbl faq]: https://www.panynj.gov/port-authority/en/help-center/faq/bridges-and-tunnels-faq.html
 
-<h4>
-  <a href="https://www.nymtc.org/en-us/Data-and-Modeling/Transportation-Data-and-Statistics/Publications/Hub-Bound-Travel" target="_blank">
-    NYMTC Hub-Bound Travel
-  </a>
-</h4>
-<p>Annual study of modes / vehicles in/out of Manhattan CBD</p>
-<a href="https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2023%20Hub%20Bound/2023%20Hub%20Bound%20Report-%203.18.25.pdf?ver=7S_sDok5O_aw9bEN3A-NjA%3d%3d" target="_blank">
-  <img src="/nymtc-hbt.png"/>
-</a>
+<a href="https://github.com/hudcostreets/hudson-transit" target="_blank"><img v-drag="'xbl'" src="/xbl.png"/></a>
+<!--
+<img v-drag="'xbl'" src="/xbl.png"/>
+-->
+
+<a href="https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2023%20Hub%20Bound/2023%20Hub%20Bound%20Report-%203.18.25.pdf?ver=7S_sDok5O_aw9bEN3A-NjA%3d%3d" target="_blank"><img v-drag="'nymtc'" src="/nymtc-hbt.png"/></a>
+<!--
+<img v-drag="'nymtc'" src="/nymtc-hbt.png"/>
+-->
 
 ---
 layout: iframe-right
