@@ -108,6 +108,7 @@ class: us
 ---
 <style>
 .slidev-layout.us {
+  padding-right: 5rem;
   h2 {
     margin-top: 1.7rem;
     margin-bottom: 0.5rem;
@@ -199,7 +200,6 @@ dragPos:
 ---
 
 <style>
-.nymtc + footer { .foot-url { display: none; } }
 .slidev-layout.nymtc {
   display: grid;
   padding: 2rem 2.5rem 2rem 2.5rem;
@@ -243,7 +243,7 @@ scale: 0.8
 class: ctbk
 ---
 <style>
-.ctbk + footer { width: 50%; right: auto;.foot-url { display: none } }
+.ctbk + footer { width: 50%; right: auto; }
 .slidev-layout.ctbk {
   padding: 2rem 1rem 0 2rem;
   p { margin-bottom: 0.5rem }
@@ -292,7 +292,7 @@ scale: 0.8
 class: crashes
 ---
 <style>
-.crashes + footer { width: 50%; right: auto;.foot-url { display: none } }
+.crashes + footer { width: 50%; right: auto; }
 .slidev-layout.crashes {
   p { margin-bottom: 0.5rem }
   img {
@@ -328,7 +328,8 @@ scale: 0.6
 class: path
 ---
 <style>
-.path + footer { display: none; }
+/*.path + footer { width: 50%; right: auto; }*/
+.path + footer { display: none }
 .slidev-layout.path {
   pre {
     background-color: #f8f8f8;
@@ -365,7 +366,7 @@ PATH ridership data
   ]
   ```
   ([PATH-Monthly-Ridership-Report.json])
-- Soon™️: LLMs / ML tools for reading PDFs
+- Soon️?: LLMs / ML tools for reading PDFs
 
 [PATH-Monthly-Ridership-Report.json]: https://github.com/hudcostreets/path/blob/main/templates/PATH-Monthly-Ridership-Report.json
 
@@ -429,10 +430,6 @@ class: hob
 ---
 class: srcs
 ---
-<style>
-.slidev-layout.srcs + footer { .foot-url { display: none } }
-</style>
-
 # Data sources
 
 <div style="font-size:0.5em">&nbsp;</div>
