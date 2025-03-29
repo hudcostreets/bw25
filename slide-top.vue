@@ -1,8 +1,8 @@
 <template>
   <footer class="absolute bottom-0 left-0 right-0 p-2">
     <div class="absolute bottom-0 right-0 footer flex items-center">
-      <a class="mr-0.2 foot-url" href="https://bw25.hccs.dev">bw25.hccs.dev</a>
-      <a href="https://hudcostreets.org"><img src="/HCCS_ID_Knockout_Hi.png" /></a>
+      <a target="_blank" class="mr-0.2 foot-url" href="https://bw25.hccs.dev">bw25.hccs.dev</a>
+      <a target="_blank" href="https://hudcostreets.org"><img src="/HCCS_ID_Knockout_Hi.png" /></a>
     </div>
   </footer>
 </template>

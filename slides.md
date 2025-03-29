@@ -226,22 +226,15 @@ class: ctbk
 ---
 <style>
 .ctbk + footer { width: 50%; right: auto;.foot-url { display: none } }
-.slidev-page-6 .slidev-layout {
+.slidev-layout.ctbk {
   padding: 2rem 1rem 0 2rem;
   p { margin-bottom: 0.5rem }
-  img {
+  img:not(.right-overlay) {
     height: 13.5rem;
     position: absolute;
     padding-left: 1rem;
     bottom: 2%;
     z-index: 1;
-  }
-  img[src*="cb-hc-opp"] {
-    z-index: 10;
-    right: 0;
-    top: 0;
-    height: 100%;
-    margin: 0;
   }
 }
 </style>
@@ -257,7 +250,7 @@ Citi Bike dashboard
 
 [![](/g2410.png)][2410]
 
-<img v-click src="/cb-hc-opp.png" />
+<img v-click class="right-overlay" src="/cb-hc-opp.png" />
 
 <!--
 Show JC+HOB plateau, ebike share over time, Grove St 80/day in Feb '25
@@ -316,7 +309,10 @@ class: path
 <style>
 .path + footer { display: none; }
 .slidev-layout.path {
-  background-image: none;
+    pre {
+      background-color: white;
+      font-size: 0.6rem;
+    }
   .flex {
     display: flex;
     flex-direction: row;
@@ -334,8 +330,26 @@ class: path
 PATH ridership data
 - Weekend ridership exceeding pre-COVID levels (despite worse service)
 - Weekdays ≈60-70% of pre-COVID levels
-- [PANYNJ Traffic and Volume stats](https://www.panynj.gov/path/en/about/stats.html)
+- [PANYNJ Traffic and Volume stats](https://www.panynj.gov/path/en/about/stats.html) (PDFs)
+- [Tabula]: extract tables from PDFs (library+GUI)
+  ```json
+  [
+      { "y1": 121.284, "x1": 70.016, "y2": 245.247, "x2": 568.926 },
+      { "y1": 261.316, "x1": 71.546, "y2": 407.469, "x2": 569.691 },
+      { "y1": 482.459, "x1": 70.781, "y2": 603.36, "x2": 568.161 },
+      { "y1": 620.96, "x1": 70.781, "y2": 761.757, "x2": 569.691 }
+  ]
+  ```
+  ([PATH-Monthly-Ridership-Report.json])
+- Soon™️: LLMs / ML tools for reading PDFs
 
+[PATH-Monthly-Ridership-Report.json]: https://github.com/hudcostreets/path/blob/main/templates/PATH-Monthly-Ridership-Report.json
+
+<img v-click class="right-overlay" src="/tabula1.png"/>
+
+<img v-click class="right-overlay" src="/tabula2.png"/>
+
+<!--
 <div class="flex">
   <a target="_blank" href="https://hudcostreets.org/panynj"><div class="col">
     <p>Petition / Campaign</p>
@@ -346,8 +360,10 @@ PATH ridership data
     <img src="/path-vols.png"/>
   </div></a>
 </div>
+-->
 
 [path.hudcostreets.org]: https://path.hudcostreets.org
+[Tabula]: https://tabula.technology/
 
 ---
 layout: iframe-right
