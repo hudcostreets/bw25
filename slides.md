@@ -21,17 +21,6 @@ Ryan Williams
 ---
 class: hccs
 ---
-# Hudson County Complete Streets
-> Our mission is to improve connectivity and transportation equity in Hudson County by advocating for safe streets, pedestrian and cycling infrastructure, and access to transit in each community.
-
-Campaigns:
-- [Improving PATH service][PATH]
-- [Supporting congestion pricing][CP]
-- [Opposing $11BN Turnpike-widening][TA]
-- [Hudson County Vision Zero Action Plan][VZ]
-
-👉 [hudcostreets.org]
-
 <style>
 .slidev-layout.hccs {
   h1 { margin-bottom: 0 }
@@ -45,10 +34,8 @@ Campaigns:
     /*TODO: put these in an actual grid*/
     &[src="/vz.png"] {
       right: 1.3%;
-      /*top: 15%;*/
       bottom: 36%;
       width: 22.5%;
-      /*height: 50%;*/
     }
     &[src="/path.jpg"] {
       width: 27%;
@@ -71,6 +58,7 @@ Campaigns:
       flex: 0 0 auto; /* Don't grow or shrink */
       height: 100%;
       position: relative;
+      z-index: 1;
     }
     img {
       height: 100%;
@@ -81,9 +69,20 @@ Campaigns:
   }
 }
 /* TODO: theme var */
-.dark img { border: 1px solid white }
-.light img { border: 3px solid #00793f }
+.dark .slidev-layout.hccs img { border: 1px solid white }
+.light .slidev-layout.hccs img { border: 3px solid #00793f }
 </style>
+
+# Hudson County Complete Streets
+> Our mission is to improve connectivity and transportation equity in Hudson County by advocating for safe streets, pedestrian and cycling infrastructure, and access to transit in each community.
+
+Campaigns:
+- [Improving PATH service][PATH]
+- [Supporting congestion pricing][CP]
+- [Opposing $11BN Turnpike-widening][TA]
+- [Hudson County Vision Zero Action Plan][VZ]
+
+👉 [hudcostreets.org]
 
 <div class="imgs">
   <div><a target="_blank" href="https://turnpiketrap.org/"><img src="/tt.png"/></a></div>
@@ -139,10 +138,10 @@ class: us
 ## Theory of change
 - **Internet / Social Media**: shows people what's possible, enables organizing
 - **Data for decision-making**: proliferation of sensors/data and tools for analyzing/responding
-- **New technology**: ebikes/micromobility, better/faster/quieter transit, app-cars / AVs help reduce <br/>car ownership
+- **New technology**: ebikes/micromobility, faster/quieter transit, app-cars / AVs can reduce car dependence
 
 ---
-class: proving-it
+class: plots
 dragPos:
   jc: 724,18,241,_
   cb: 345,27,367,_
@@ -152,7 +151,7 @@ dragPos:
 ---
 
 <style>
-.slidev-layout.proving-it {
+.slidev-layout.plots {
   padding-top: 1.6rem;
   img {
     width: 100%;
@@ -188,6 +187,7 @@ layoutClass: nymtc
 ---
 
 <style>
+.nymtc + footer { display: none; }
 .slidev-layout.nymtc {
   padding: 2rem 2.5rem 2rem 1.5rem;
   grid-template-columns: 70% 30%;
@@ -197,12 +197,8 @@ layoutClass: nymtc
     position: absolute;
     bottom: 0;
   }
-  .col-left, .col-right {
-    position: relative;
-  }
-  .col-right {
-    padding-top: 1.5rem;
-  }
+  .col-left, .col-right { position: relative }
+  .col-right { padding-top: 1.5rem }
 }
 </style>
 
@@ -226,24 +222,28 @@ layoutClass: nymtc
 layout: iframe-right
 url: https://ctbk.dev
 scale: 0.8
+class: ctbk
 ---
 <style>
-  .slidev-page-6 .slidev-layout {
-    padding: 2rem 1rem 0 2rem;
-    img {
-      height: 13.5rem;
-      position: absolute;
-      padding-left: 1rem;
-      bottom: 2%;
-    }
-    img[src*="cb-hc-opp"] {
-      z-index: 10;
-      right: 0;
-      top: 0;
-      height: 100%;
-      margin: 0;
-    }
+.ctbk + footer { width: 50%; right: auto;.foot-url { display: none } }
+.slidev-page-6 .slidev-layout {
+  padding: 2rem 1rem 0 2rem;
+  p { margin-bottom: 0.5rem }
+  img {
+    height: 13.5rem;
+    position: absolute;
+    padding-left: 1rem;
+    bottom: 2%;
+    z-index: 1;
   }
+  img[src*="cb-hc-opp"] {
+    z-index: 10;
+    right: 0;
+    top: 0;
+    height: 100%;
+    margin: 0;
+  }
+}
 </style>
 
 # [ctbk.dev]
@@ -275,7 +275,23 @@ Show JC+HOB plateau, ebike share over time, Grove St 80/day in Feb '25
 layout: iframe-right
 url: https://crashes.hudcostreets.org#vs-homicides
 scale: 0.8
+class: crashes
 ---
+<style>
+.crashes + footer { width: 50%; right: auto;.foot-url { display: none } }
+.slidev-layout.crashes {
+  p { margin-bottom: 0.5rem }
+  img {
+    width: 30%;
+    height: 49%;
+    object-fit: cover;
+    object-position: top left;
+    position: absolute;
+    bottom: 2.8%;
+  }
+}
+</style>
+
 # [crashes.hudcostreets.org]
 NJ crash data
 - Fatal crashes, updated daily ([NJSP])
@@ -283,19 +299,6 @@ NJ crash data
 - <logos-bluesky/> &nbsp;[@crashes.hudcostreets.org]
 - <logos-slack-icon/> &nbsp;#crash-bot
 
-<style>
-p {
-  margin-bottom: 0.5rem;
-}
-img {
-  width: 30%;
-  height: 49%;
-  object-fit: cover;
-  object-position: top left;
-  position: absolute;
-  bottom: 2.8%;
-}
-</style>
 
 <img src="/crash-bot.png"/>
 
@@ -311,16 +314,15 @@ scale: 0.6
 class: path
 ---
 <style>
+.path + footer { display: none; }
 .slidev-layout.path {
   background-image: none;
   .flex {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding-top: 1.6rem;
     .col {
       img {
-        /*display: inline;*/
         width: 100%;
       }
     }
@@ -335,12 +337,12 @@ PATH ridership data
 - [PANYNJ Traffic and Volume stats](https://www.panynj.gov/path/en/about/stats.html)
 
 <div class="flex">
-  <a href="https://hudcostreets.org/panynj"><div class="col">
-    <div>Petition / Campaign</div>
+  <a target="_blank" href="https://hudcostreets.org/panynj"><div class="col">
+    <p>Petition / Campaign</p>
     <img src="/path-qr.png"/>
   </div></a>
-  <a href="https://hudcostreets.org/panynj/volunteer"><div class="col">
-    <div>Canvassing</div>
+  <a target="_blank" href="https://hudcostreets.org/panynj/volunteer"><div class="col">
+    <p>Canvassing</p>
     <img src="/path-vols.png"/>
   </div></a>
 </div>
@@ -353,19 +355,19 @@ url: /bh24.pdf
 class: hob
 ---
 <style>
+.hob + footer { display: none; }
 .dark .slidev-layout.hob {
   background: #6436a9 url('/bh-white.png') no-repeat right bottom;
   --slidev-code-background: #6436a9;
   --slidev-code-radius: 0;
-  background-size: 8em;
+  background-size: 6rem;
 }
 .light .slidev-layout.hob {
   /*color: #6436a9;*/
   color: black;
   background: white url('/bh.png') no-repeat right bottom;
-  background-size: 8em;
+  background-size: 6rem;
 }
-
 .slidev-layout.hob {
   h1 {
     line-height: 3.3rem;

@@ -1,14 +1,28 @@
+footer {
+  .foot-url {
+    font-size: 0.8rem;
+    border-bottom: 1px dotted;
+  }
+  img {
+    width: 6rem;
+  }
+}
+.dark footer {
+  /* TODO: CSS var / theme this*/
+  color: white;
+}
+.light footer {
+  color: black;
+}
 .dark .slidev-layout {
-  background: #00793f url('/HCCS_ID_Knockout_Hi.png') no-repeat right bottom;
+  background: #00793f;
   --slidev-code-background: #00793f;
   --slidev-code-radius: 0;
-  background-size: 8em;
 }
 .light .slidev-layout {
   /*color: #00793f;*/
   color: black;
-  background: white url('/HCCS_ID_Primary_Hi.png') no-repeat right bottom;
-  background-size: 8em;
+  background: white;
 }
 
 .slidev-layout {
