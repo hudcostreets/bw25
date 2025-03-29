@@ -4,6 +4,7 @@ title: data @ hudcostreets
 info: NJ Bike Walk Summit 2025 slides, Hudson County Complete Streets
 selectable: true
 class: text-center  # apply unocss classes to the current slide
+colorSchema: dark
 drawings:  # https://sli.dev/features/drawing
   persist: false
 mdc: true
