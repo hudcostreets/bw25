@@ -350,8 +350,28 @@ PATH ridership data
 ---
 layout: iframe-right
 url: /bh24.pdf
+class: hob
 ---
-<style>.slidev-page-9 h1 { line-height: 3.3rem; }</style>
+<style>
+.dark .slidev-layout.hob {
+  background: #6436a9 url('/bh-white.png') no-repeat right bottom;
+  --slidev-code-background: #6436a9;
+  --slidev-code-radius: 0;
+  background-size: 8em;
+}
+.light .slidev-layout.hob {
+  /*color: #6436a9;*/
+  color: black;
+  background: white url('/bh.png') no-repeat right bottom;
+  background-size: 8em;
+}
+
+.slidev-layout.hob {
+  h1 {
+    line-height: 3.3rem;
+  }
+}
+</style>
 
 # [2024 Bike Hoboken Traffic Injury Report][bh24]
 - [Bike Hoboken] OPRA'd all 2024 crash records
