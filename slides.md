@@ -392,6 +392,31 @@ PATH ridership data
 
 ---
 layout: iframe-right
+url: https://map.bikejc.org/?l=wbr
+class: jc
+---
+<style>
+/*.jc + footer { width: 50%; right: auto; }*/
+.jc + footer { display: none }
+</style>
+
+# JC bike/ward map
+- 2,000 lane miles for cars
+- ≈20 PBL miles
+- [JC Bike Master Plan][bmp] / [bikejc.github.io/bike-master-plan] / [PDF]
+- Mirror/Join [JC ArcGIS layers][jc gis].
+- [NJGIN index] of agency ArcGIS servers
+
+[![](/njgin.png)][NJGIN index]
+
+[bmp]: https://street-plans.com/lets-ride-jc-bicycle-master-plan-jersey-city-nj/
+[bikejc.github.io/bike-master-plan]: https://bikejc.github.io/bike-master-plan/
+[PDF]: https://cdn5-hosted.civiclive.com/UserFiles/Servers/Server_6189660/File/Community/Transportation/LetsRideJCMasterPlan-FinalDraft%206.16.19_09_30.pdf
+[jc gis]: https://jerseycity.maps.arcgis.com/apps/mapviewer/index.html?webmap=c8b0f0723aad4c68ab68861ee071f218
+[NJGIN index]: https://njogis-newjersey.opendata.arcgis.com/
+
+---
+layout: iframe-right
 url: /bh24.pdf
 class: hob
 ---
@@ -480,3 +505,18 @@ class: srcs
 
 [mrazza/path-data]: https://github.com/mrazza/path-data
 [jamespfennell/path-train-gtfs-realtime]: https://github.com/jamespfennell/path-train-gtfs-realtime
+
+---
+layout: iframe-right
+url: https://hudcostreets.org/careers
+class: end
+---
+<style>
+.end + footer { width: 50%; right: auto; }
+</style>
+
+# Thank you!
+
+We're hiring: [hudcostreets.org/careers].
+
+[hudcostreets.org/careers]: https://hudcostreets.org/careers
