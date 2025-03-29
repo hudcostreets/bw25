@@ -418,26 +418,27 @@ class: hob
 [NJTR-1]: https://www.nj.gov/transportation/refdata/accident/pdf/NJTR-1CrashReportManual2023.pdf
 
 ---
+class: srcs
 ---
+<style>
+.slidev-layout.srcs + footer { .foot-url { display: none } }
+</style>
 
-# Data projects, sources
-
-- [ctbk.dev]: Citi Bike dashboard
-- [crashes.hudcostreets.org]: NJ crash data
-- [path.hudcostreets.org]: PATH ridership data
-- [hudcostreets/hudson-transit]: NYMTC Hudson River crossing data
+# Data sources
 
 <div style="font-size:0.5em">&nbsp;</div>
 
-| Source   | Data                   | Frequency | Delay       | HCCS Mirror                                                                                 |
-|----------|------------------------|----------|-------------|---------------------------------------------------------------------------------------------|
-| [NJSP]   | Crashes (fatal)        | Daily    | 1d – 3mos   | [<logos-github-icon/>][hudcostreets/nj-crashes] [<logos-aws-s3 />][`s3://nj-crashes/njsp`]  |
-| [NJ DOT] | Crashes (all)          | Annually | 2-3yrs ('22) | [<logos-github-icon/>][hudcostreets/nj-crashes] [<logos-aws-s3 />][`s3://nj-crashes/njdot`] |
-| [Lyft] | Citi Bike ridership    | Monthly  | ≈1wk        | [<logos-github-icon/>][hudcostreets/ctbk.dev] [<logos-aws-s3 />][`s3://ctbk`]               |
-| [PANYNJ] | PATH Ridership         | Monthly  | 1-2mos      | [<logos-github-icon/>][hudcostreets/path]                                                   |
-| [NYMTC]  | Hudson River crossings | Annually | 1-2yrs ('23) | [<logos-google-drive />][HCCS NYMTC]                                                        |
-| NJ Transit | Rides per station/line | OPRA     | -           | [<logos-google-drive />][HCCS NJT]                                                          |
-| NJ Turnpike | Exits x Veh types      | OPRA         | -           | [<logos-google-drive />][HCCS NJTA]                                                         |
+| Agency      | Data                               | Frequency                   | Delay       | Mirror / Site                                                                                                                |
+|-------------|------------------------------------|-----------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------|
+| [NJSP]      | Crashes (fatal)                    | Daily                       | 1d – 3mos   | [<logos-github-icon/>][hudcostreets/nj-crashes] [<logos-aws-s3 />][`s3://nj-crashes/njsp`] &nbsp;[crashes.hudcostreets.org]  |
+| [NJ DOT]    | Crashes (all)                      | Annually                    | 2-3yrs ('22) | [<logos-github-icon/>][hudcostreets/nj-crashes] [<logos-aws-s3 />][`s3://nj-crashes/njdot`] &nbsp;[crashes.hudcostreets.org] |
+| [Lyft]      | Citi Bike ridership                | Monthly                     | ≈1wk        | [<logos-github-icon/>][hudcostreets/ctbk.dev] [<logos-aws-s3 />][`s3://ctbk`]                &nbsp;[ctbk.dev]                |
+| [PANYNJ]    | PATH Ridership                     | Monthly                     | 1-2mos      | [<logos-github-icon/>][hudcostreets/path]                                                    &nbsp;[path.hudcostreets.org]   |
+| [NYMTC]     | Hudson River crossings             | Annually                    | 1-2yrs ('23) | [<logos-github-icon/>][hudcostreets/hudson-transit] [<logos-google-drive />][HCCS NYMTC]                                     |
+| NJ Transit  | Rides per station/line             | OPRA                        | -           | [<logos-google-drive />][HCCS NJT]                                                                                           |
+| NJ Turnpike | Exits x Veh types                  | OPRA                        | -           | [<logos-google-drive />][HCCS NJTA]                                                                                          |
+| [Lyft]      | [Citi Bike system status][cb gbfs] | Realtime ([GBFS]) | 1min | -                                                                                                                            |
+| PANYNJ      | [PATH real-time status][path realtime] | Realtime ([GTFS]) | 1min | [<logos-github-icon/>][mrazza/path-data] &nbsp;[<logos-github-icon/>][jamespfennell/path-train-gtfs-realtime]                |
 
 [ctbk.dev]: https://ctbk.dev
 [crashes.hudcostreets.org]: https://crashes.hudcostreets.org
@@ -460,7 +461,16 @@ class: hob
 [HCCS NJT]: https://drive.google.com/drive/folders/1IkeX8EOavWC1uUa1eHIIbVmE8i5tDuwE
 [`s3://ctbk`]: https://ctbk.s3.amazonaws.com/index.html
 
-[gbfs]: https://github.com/MobilityData/gbfs
+[GBFS]: https://github.com/MobilityData/gbfs
 [cb gbfs]: https://gbfs.citibikenyc.com/gbfs/2.3/gbfs.json
 [cb gbfs stations]: https://gbfs.lyft.com/gbfs/2.3/bkn/en/station_information.json
 [cb gbfs status]: https://gbfs.lyft.com/gbfs/2.3/bkn/en/station_status.json
+[GTFS]: https://gtfs.org/
+
+[path grpc]: https://github.com/mrazza/path-data
+[path grpc blog]: https://medium.com/@mrazza/programmatic-path-real-time-arrival-data-5d0884ae1ad6
+[path gtfs]: https://github.com/jamespfennell/path-train-gtfs-realtime
+[path realtime]: https://www.panynj.gov/path/en/index.html
+
+[mrazza/path-data]: https://github.com/mrazza/path-data
+[jamespfennell/path-train-gtfs-realtime]: https://github.com/jamespfennell/path-train-gtfs-realtime
