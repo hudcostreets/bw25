@@ -1,20 +1,11 @@
 ---
-# You can also start simply with 'default'
 theme: ./theme
 title: data @ hudcostreets
-info: |
-  ## NJ Bike Walk Summit – 3/29/25
-  Ryan Williams, Hudson County Complete Streets
+info: NJ Bike Walk Summit 2025 slides, Hudson County Complete Streets
 selectable: true
-# apply unocss classes to the current slide
-class: text-center
-# https://sli.dev/features/drawing
-drawings:
+class: text-center  # apply unocss classes to the current slide
+drawings:  # https://sli.dev/features/drawing
   persist: false
-# background: #00793e
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
-# transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 layout: section
 ---
@@ -95,12 +86,12 @@ Campaigns:
 </style>
 
 <div class="imgs">
-  <div><a href="https://turnpiketrap.org/"><img src="/tt.png"/></a></div>
-  <div><a href="https://newsletter.hudcostreets.org/archive/save-our-hudson-county-buses-deadline-august-16/"><img src="/bus.jpeg"/></a></div>
-  <div><a href="https://newsletter.hudcostreets.org/archive/action-alert-tell-gov-murphy-142m-for-nj-transit/"><img src="/njt.jpeg"/></a></div>
+  <div><a target="_blank" href="https://turnpiketrap.org/"><img src="/tt.png"/></a></div>
+  <div><a target="_blank" href="https://newsletter.hudcostreets.org/archive/save-our-hudson-county-buses-deadline-august-16/"><img src="/bus.jpeg"/></a></div>
+  <div><a target="_blank" href="https://newsletter.hudcostreets.org/archive/action-alert-tell-gov-murphy-142m-for-nj-transit/"><img src="/njt.jpeg"/></a></div>
 </div>
-<a href="https://hudcostreets.org/panynj"><img src="/path.jpg"/></a>
-<a href="https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/"><img src="/vz.png"/></a>
+<a target="_blank" href="https://hudcostreets.org/panynj"><img src="/path.jpg"/></a>
+<a target="_blank" href="https://newsletter.hudcostreets.org/archive/january-2025-vision-zero-plan-launch-jan-11/"><img src="/vz.png"/></a>
 
 [PATH]: https://hudcostreets.org/panynj
 [CP]: https://nyc.streetsblog.org/2025/03/21/advocates-demand-new-jersey-agencies-cough-up-congestion-pricing-data
@@ -153,20 +144,16 @@ class: us
 ---
 class: proving-it
 dragPos:
-  jc: 724,18,241,302
-  cb: 355,18,390,282
-  path: 432,276,416,257
-  xbl: 46,74,435,266
-  hom: 46,300,427,233
+  jc: 724,18,241,_
+  cb: 345,27,367,_
+  path: 45,303,360,_
+  xbl: 45,78,368,_
+  hom: 420,303,372,_
 ---
 
 <style>
 .slidev-layout.proving-it {
   padding-top: 1.6rem;
-  h1 {
-    /*position: relative;*/
-    /*z-index: 200;*/
-  }
   img {
     width: 100%;
     height: 100%;
@@ -175,18 +162,18 @@ dragPos:
 </style>
 
 <!--
-<div v-drag="'jc'"><img src="/pbls-roads.gif" class="jc" /></div>
+<div v-drag="'jc'"><img src="/jc.gif" class="jc" /></div>
 <div v-drag="'cb'"><img src="/g2410.png" class="cb"/></div>
-<div v-drag="'path'"><img src="/path-vs19.png" class="path"/></div>
 <div v-drag="'xbl'"><img src="/xbl2.png" class="xbl"/></div>
 <div v-drag="'hom'"><img class="hom" src="/hom.png"/></div>
+<div v-drag="'path'"><img src="/path-vs19.png" class="path"/></div>
 -->
 
-<div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/pbls-roads.gif" class="jc" /></a></div>
+<div v-drag="'jc'"><a target="_blank" href="https://map.bikejc.org/?ll=40.720_-74.068&z=14"><img src="/jc.gif" class="jc" /></a></div>
 <div v-drag="'cb'"><a target="_blank" href="https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410"><img src="/g2410.png" class="cb"/></a></div>
-<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png" class="path"/></a></div>
 <div v-drag="'xbl'"><a target="_blank" href="https://github.com/hudcostreets/hudson-transit"><img src="/xbl2.png" class="xbl"/></a></div>
 <div v-drag="'hom'"><a target="_blank" href="https://crashes.hudcostreets.org/#vs-homicides"><img class="hom" src="/hom.png"/></a></div>
+<div v-drag="'path'"><a target="_blank" href="https://path.hudcostreets.org/#vs-2019"><img src="/path-vs19.png" class="path"/></a></div>
 
 # Proving it, locally
 
@@ -205,12 +192,16 @@ layoutClass: nymtc
   padding: 2rem 2.5rem 2rem 1.5rem;
   grid-template-columns: 70% 30%;
   gap: 1rem;
+  background-image: none;
   img {
     position: absolute;
     bottom: 0;
   }
   .col-left, .col-right {
     position: relative;
+  }
+  .col-right {
+    padding-top: 1.5rem;
   }
 }
 </style>
@@ -245,13 +236,12 @@ scale: 0.8
       padding-left: 1rem;
       bottom: 2%;
     }
-    img[src*="cb-hc"] {
+    img[src*="cb-hc-opp"] {
       z-index: 10;
       right: 0;
       top: 0;
       height: 100%;
-      /* border: 2px solid black; */
-      margin: auto;
+      margin: 0;
     }
   }
 </style>
@@ -262,8 +252,8 @@ Citi Bike dashboard
 - Est. Oct '20, Updates ≈automatically each month
 - Cleaned data at [`s3://ctbk`], code [on &nbsp;<logos-github-icon color="white" />][ctbk gh]
 - 3.8MM rides/mo (86k/mo in JC+HOB)
-- 67% ebike share, 82% annual subscribers
-- Grove St (≈2 parking spots): 90-180 ride ends / day ([Feb '25][2502], [Oct '24][2410])
+- [67%][ebikes] ebike share, [82%][subs] annual subscribers
+- Grove St (≈2 car-parking spots): 90-180 ride ends / day ([Feb '25][2502], [Oct '24][2410])
 
 [![](/g2410.png)][2410]
 
@@ -278,6 +268,8 @@ Show JC+HOB plateau, ebike share over time, Grove St 80/day in Feb '25
 [ctbk gh]: https://github.com/neighbor-ryan/ctbk.dev
 [2410]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2410
 [2502]: https://ctbk.dev/stations?ll=40.717-74.045&z=15&ss=JC115&ym=2502
+[subs]: https://ctbk.dev/?s=u&pct
+[ebikes]: https://ctbk.dev/?s=b&pct&rt=ce&d=2002-
 
 ---
 layout: iframe-right
@@ -314,12 +306,44 @@ img {
 
 ---
 layout: iframe-right
-url: https://path.hudcostreets.org#vs-2019
-scale: 0.7
+url: 'https://path.hudcostreets.org#vs-2019'
+scale: 0.6
+class: path
 ---
+<style>
+.slidev-layout.path {
+  background-image: none;
+  .flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 1.6rem;
+    .col {
+      img {
+        /*display: inline;*/
+        width: 100%;
+      }
+    }
+  }
+}
+</style>
+
 # [path.hudcostreets.org]
 PATH ridership data
 - Weekend ridership exceeding pre-COVID levels (despite worse service)
+- Weekdays ≈60-70% of pre-COVID levels
+- [PANYNJ Traffic and Volume stats](https://www.panynj.gov/path/en/about/stats.html)
+
+<div class="flex">
+  <a href="https://hudcostreets.org/panynj"><div class="col">
+    <div>Petition / Campaign</div>
+    <img src="/path-qr.png"/>
+  </div></a>
+  <a href="https://hudcostreets.org/panynj/volunteer"><div class="col">
+    <div>Canvassing</div>
+    <img src="/path-vols.png"/>
+  </div></a>
+</div>
 
 [path.hudcostreets.org]: https://path.hudcostreets.org
 
