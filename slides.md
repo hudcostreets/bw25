@@ -106,6 +106,17 @@ Campaigns:
 ---
 class: us
 ---
+<style>
+.slidev-layout.us {
+  h2 {
+    margin-top: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .right-overlay {
+    padding: 2rem;
+  }
+}</style>
+
 # Big picture – US transportation sector is broken
 ≈100% car-dependence:
 
@@ -125,20 +136,18 @@ class: us
 [shinkansen]: https://en.wikipedia.org/wiki/Shinkansen#Safety_record
 [cn hsr]: https://www.threads.net/@thetransitguy/post/DGY0GP6B3hD/video-this-is-the-beijing-shanghai-corridor-which-takes-4-hours-and-18-minutes-to-cove
 [world transit]: https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/
+[road deaths per capita]: https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html
 
 **Unprecedented, civilization-scale disaster**, entirely a policy choice. We have the technology to do better.
 
-<style>
-.slidev-layout.us {
-  h2 {
-    margin-top: 1.7rem;
-    margin-bottom: 0.5rem;
-  }
-}</style>
 ## Theory of change
 - **Internet / Social Media**: shows people what's possible, enables organizing
 - **Data for decision-making**: proliferation of sensors/data and tools for analyzing/responding
 - **New technology**: ebikes/micromobility, faster/quieter transit, app-cars / AVs can reduce car dependence
+
+<a target="_blank" href="https://www.thetransportpolitic.com/2023/06/07/once-a-leader-in-urban-rail-investment-the-united-states-now-trails/"><img v-click class="right-overlay" src="/subway-countries.jpeg"/></a>
+
+<a target="_blank" href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html"><img v-click class="right-overlay" src="/deaths-per-capita.png"/></a>
 
 ---
 class: plots
@@ -236,6 +245,9 @@ class: ctbk
     bottom: 2%;
     z-index: 1;
   }
+  .right-overlay {
+    border: 1rem solid #00793f;
+  }
 }
 </style>
 
@@ -309,10 +321,10 @@ class: path
 <style>
 .path + footer { display: none; }
 .slidev-layout.path {
-    pre {
-      background-color: white;
-      font-size: 0.6rem;
-    }
+  pre {
+    background-color: #f8f8f8;
+    font-size: 0.6rem;
+  }
   .flex {
     display: flex;
     flex-direction: row;
@@ -322,6 +334,9 @@ class: path
         width: 100%;
       }
     }
+  }
+  .right-overlay {
+    border: 1rem solid #00793f;
   }
 }
 </style>
